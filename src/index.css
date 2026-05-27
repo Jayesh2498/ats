@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── Viridian Color System ── */
+    --background: 150 18% 97%;        /* #F4F7F6 */
+    --background-secondary: 150 16% 93%; /* #EAF0EE */
+    --foreground: 168 20% 15%;        /* #1F2D2A */
+
+    --card: 152 14% 95%;              /* #EEF3F1 */
+    --card-foreground: 168 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 168 20% 15%;
+
+    --primary: 162 34% 37%;           /* #40826D viridian */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 16% 93%;         /* #EAF0EE */
+    --secondary-foreground: 162 34% 28%;
+
+    --muted: 150 14% 91%;
+    --muted-foreground: 165 11% 44%;  /* #6B7C77 */
+
+    --accent: 150 16% 89%;
+    --accent-foreground: 162 34% 28%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 16% 87%;
+    --input: 150 14% 91%;
+    --ring: 162 34% 37%;
+
+    --radius: 0.75rem;
+
+    /* Claymorphism shadow */
+    --clay-shadow: 8px 8px 16px rgba(0,0,0,0.08), -6px -6px 12px rgba(255,255,255,0.70);
+    --clay-shadow-sm: 4px 4px 10px rgba(0,0,0,0.06), -3px -3px 8px rgba(255,255,255,0.65);
+    --clay-shadow-hover: 10px 10px 20px rgba(0,0,0,0.10), -8px -8px 16px rgba(255,255,255,0.75);
+    --clay-shadow-inset: inset 2px 2px 6px rgba(0,0,0,0.07), inset -2px -2px 6px rgba(255,255,255,0.6);
+
+    /* Viridian palette extras */
+    --viridian: 162 34% 37%;          /* #40826D */
+    --viridian-dark: 162 40% 28%;     /* #2F6F5E */
+    --viridian-light: 162 27% 48%;    /* #5A9C87 */
+    --ai-accent: 257 82% 73%;         /* #8B7CF6 violet – AI only */
+
+    /* Sidebar */
+    --sidebar-background: 150 18% 93%;
+    --sidebar-foreground: 168 20% 25%;
+    --sidebar-primary: 162 34% 37%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 14% 88%;
+    --sidebar-accent-foreground: 162 34% 28%;
+    --sidebar-border: 150 15% 85%;
+    --sidebar-ring: 162 34% 37%;
+  }
+
+  .dark {
+    --background: 168 20% 8%;
+    --foreground: 150 18% 95%;
+    --card: 168 18% 11%;
+    --card-foreground: 150 18% 95%;
+    --popover: 168 18% 10%;
+    --popover-foreground: 150 18% 95%;
+    --primary: 162 34% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 168 16% 16%;
+    --secondary-foreground: 150 18% 90%;
+    --muted: 168 14% 18%;
+    --muted-foreground: 150 10% 60%;
+    --accent: 168 14% 18%;
+    --accent-foreground: 150 18% 90%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 168 14% 22%;
+    --input: 168 14% 18%;
+    --ring: 162 34% 50%;
+    --sidebar-background: 168 18% 10%;
+    --sidebar-foreground: 150 14% 85%;
+    --sidebar-primary: 162 34% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 168 14% 16%;
+    --sidebar-accent-foreground: 150 14% 85%;
+    --sidebar-border: 168 12% 20%;
+    --sidebar-ring: 162 34% 50%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* ═══════════════════════════════════════════════════
+   CLAYMORPHISM UTILITIES
+═══════════════════════════════════════════════════ */
+
+.clay {
+  box-shadow: var(--clay-shadow);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+.clay:hover {
+  box-shadow: var(--clay-shadow-hover);
+  transform: translateY(-2px);
+}
+.clay:active {
+  box-shadow: var(--clay-shadow-inset);
+  transform: translateY(0px);
+}
+
+.clay-sm {
+  box-shadow: var(--clay-shadow-sm);
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+.clay-sm:hover {
+  box-shadow: var(--clay-shadow);
+  transform: translateY(-1px);
+}
+
+.clay-input {
+  box-shadow: var(--clay-shadow-inset);
+  transition: box-shadow 150ms ease;
+}
+.clay-input:focus {
+  box-shadow: var(--clay-shadow-inset), 0 0 0 2px hsl(var(--primary) / 0.25);
+}
+
+.clay-btn {
+  box-shadow: var(--clay-shadow-sm);
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+.clay-btn:hover {
+  box-shadow: var(--clay-shadow);
+  transform: translateY(-1px);
+}
+.clay-btn:active {
+  box-shadow: var(--clay-shadow-inset);
+  transform: translateY(1px);
+}
+
+/* Pipeline drag lifted state */
+.card-dragging {
+  box-shadow: 14px 14px 28px rgba(0,0,0,0.14), -8px -8px 18px rgba(255,255,255,0.6) !important;
+  transform: scale(1.02) rotate(1deg) !important;
+  transition: none !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   ATS LEGACY UTILITIES (kept for compatibility)
+═══════════════════════════════════════════════════ */
+
+.timeline-connector {
+  width: 1px;
+  background: hsl(var(--border));
+  flex: 1;
+  min-height: 1.5rem;
+}
+
+[data-state="active"].panel-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 2px;
+  border-radius: 9999px;
+  background: hsl(var(--primary));
+}
+
+.thin-scroll::-webkit-scrollbar { width: 4px; }
+.thin-scroll::-webkit-scrollbar-track { background: transparent; }
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+}
+.thin-scroll::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.4);
+}
+
+/* AI glow pulse — use sparingly */
+.ai-glow {
+  animation: ai-pulse 3s ease-in-out infinite;
+}
+@keyframes ai-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--ai-accent) / 0); }
+  50%       { box-shadow: 0 0 18px 4px hsl(var(--ai-accent) / 0.2); }
+}
