@@ -36,7 +36,7 @@ export default function Workflows() {
             </div>
             <h1 className="text-4xl font-black text-foreground mb-3">Workflow Automation</h1>
             <p className="text-muted-foreground text-base leading-relaxed max-w-lg mx-auto">
-              Automate your entire hiring pipeline. From resume screening to offer letters — let SuperAGI do the heavy lifting.
+              Automate your entire hiring pipeline. From resume screening to offer letters — let TalentFlow do the heavy lifting.
             </p>
           </div>
 

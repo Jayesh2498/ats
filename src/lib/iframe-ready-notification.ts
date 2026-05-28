@@ -5,8 +5,8 @@
 
 // Message types for parent-iframe communication
 const MESSAGE_TYPE = {
-  APP_READY: 'SUPERAGI_CODER_APP_READY',
-  APP_ERROR: 'SUPERAGI_CODER_APP_ERROR',
+  APP_READY: 'TALENTFLOW_APP_READY',
+  APP_ERROR: 'TALENTFLOW_APP_ERROR',
 } as const;
 
 // Send message to parent frame (if embedded)

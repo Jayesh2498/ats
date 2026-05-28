@@ -1,7 +1,7 @@
 /**
  * Auth Reset page — dev-only utility
  * Route: /dev/auth-reset
- * Clears ONLY app_users (non-SuperAGI orgs optional), preserves ATS data
+ * Clears ONLY app_users (non-demo orgs optional), preserves ATS data
  */
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'

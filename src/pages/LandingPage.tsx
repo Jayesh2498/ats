@@ -40,7 +40,7 @@ function Navbar({ onScrollToDemo }: { onScrollToDemo: () => void }) {
             <AtsIcon size={18} color="white" />
           </div>
           <span className="text-lg font-extrabold tracking-tight text-gray-900">
-            SuperAGI <span style={{ color: '#40826D' }}>ATS</span>
+            TalentFlow <span style={{ color: '#40826D' }}>ATS</span>
           </span>
         </div>
 

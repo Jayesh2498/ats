@@ -3,7 +3,7 @@
  * Uses Web Crypto API (no Node.js needed)
  */
 
-const JWT_SECRET = 'superagi-ats-secret-2024'
+const JWT_SECRET = 'talentflow-ats-secret-2024'
 const STORAGE_KEY = 'ats_session'
 
 export interface SessionUser {
@@ -19,7 +19,7 @@ export interface SessionUser {
 // ── Password hashing (SHA-256 based, browser-compatible) ──────
 export async function hashPassword(password: string): Promise<string> {
   const encoder = new TextEncoder()
-  const salt = 'superagi-salt-v1'
+  const salt = 'talentflow-salt-v1'
   const data = encoder.encode(salt + password)
   const hashBuffer = await crypto.subtle.digest('SHA-256', data)
   const hashArray = Array.from(new Uint8Array(hashBuffer))

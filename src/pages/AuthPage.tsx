@@ -25,8 +25,8 @@ const CLAY_CARD  = '12px 12px 28px rgba(0,0,0,0.08),-8px -8px 20px rgba(255,255,
 const CLAY_BTN   = '4px 4px 10px rgba(0,0,0,0.10),-3px -3px 8px rgba(255,255,255,0.60)'
 const CLAY_INSET = 'inset 2px 2px 6px rgba(0,0,0,0.06),inset -2px -2px 6px rgba(255,255,255,0.65)'
 
-const DEMO_EMAIL    = 'superagi@superagi.com'
-const DEMO_PASSWORD = 'superagi123'
+const DEMO_EMAIL    = 'demo@talentflow.app'
+const DEMO_PASSWORD = 'demo123'
 
 export default function AuthPage() {
   const { login, signup } = useAuth()
@@ -298,7 +298,7 @@ export default function AuthPage() {
             <div className="flex-1 min-w-0">
               <p className="text-xs font-bold" style={{ color: V.text }}>Try the live demo</p>
               <p className="text-[11px] truncate" style={{ color: V.muted }}>
-                SuperAGI org · Admin account · Full access
+                TalentFlow org · Admin account · Full access
               </p>
             </div>
             <button
@@ -541,7 +541,7 @@ export default function AuthPage() {
           <div className="mt-6 flex items-center justify-center gap-2">
             <div className="size-1.5 rounded-full animate-pulse" style={{ background: V.primary }} />
             <p className="text-xs font-medium" style={{ color: V.muted }}>
-              Powered by SuperAGI · Multi-tenant · Enterprise-grade security
+              Powered by TalentFlow · Multi-tenant · Enterprise-grade security
             </p>
           </div>
         </div>

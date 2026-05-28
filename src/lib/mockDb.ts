@@ -27,10 +27,10 @@ function futureIso(daysFromNow = 1, hours = 10): string {
 // ── Static seed data ──────────────────────────────────────────
 
 export const DEMO_ORG_ID = 'org-demo'
-export const DEMO_ORG_NAME = 'SuperAGI'
+export const DEMO_ORG_NAME = 'TalentFlow'
 export const DEMO_USER = {
   id: 'user-demo',
-  email: 'superagi@superagi.com',
+  email: 'demo@talentflow.app',
   full_name: 'Alex Rivera',
   role: 'admin' as const,
   status: 'approved' as const,
@@ -334,9 +334,9 @@ export interface MockEmailSettings {
 }
 
 let _emailSettings: MockEmailSettings = {
-  org_id: DEMO_ORG_ID, provider: 'smtp', email: 'talent@superagi.com',
-  connected: true, from_name: 'SuperAGI Talent', from_email: 'talent@superagi.com',
-  smtp_host: 'smtp.superagi.com', smtp_port: 587, smtp_user: 'talent@superagi.com', smtp_pass: '••••••••',
+  org_id: DEMO_ORG_ID, provider: 'smtp', email: 'talent@talentflow.app',
+  connected: true, from_name: 'TalentFlow Talent', from_email: 'talent@talentflow.app',
+  smtp_host: 'smtp.talentflow.app', smtp_port: 587, smtp_user: 'talent@talentflow.app', smtp_pass: '••••••••',
 }
 
 // ── Build full DbApplication objects ─────────────────────────

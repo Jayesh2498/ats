@@ -99,7 +99,7 @@ function printOffer(offer: Offer) {
   <div class="header">
     <div class="logo-bar">
       <div class="logo-dot"><span>H</span></div>
-      <span class="company-name">${offer.company_name ?? 'SuperAGI Inc.'}</span>
+      <span class="company-name">${offer.company_name ?? 'TalentFlow Inc.'}</span>
     </div>
     <p class="doc-label">Offer of Employment</p>
     <h1>${offer.job_title}</h1>
@@ -132,7 +132,7 @@ function printOffer(offer: Offer) {
     <p>We look forward to welcoming you aboard. Please review the Terms & Conditions below carefully before responding.</p>
     <div style="margin-top:20px;padding-top:16px;border-top:1px solid #B0D9CF">
       <p>Yours sincerely,</p>
-      <p><strong>The Hiring Team</strong><br><span style="font-size:11px;color:#6B7C77">${offer.company_name ?? 'SuperAGI Inc.'}</span></p>
+      <p><strong>The Hiring Team</strong><br><span style="font-size:11px;color:#6B7C77">${offer.company_name ?? 'TalentFlow Inc.'}</span></p>
     </div>
   </div>
 
@@ -398,7 +398,7 @@ export default function OfferAcceptance() {
                     <div className="pt-3 border-t" style={{ borderColor: V.border }}>
                       <p className="text-sm" style={{ color: V.text }}>Yours sincerely,</p>
                       <p className="mt-1 text-sm font-bold" style={{ color: V.text }}>The Hiring Team</p>
-                      <p className="text-xs mt-0.5" style={{ color: V.muted }}>{offer.company_name ?? 'SuperAGI Inc.'}</p>
+                      <p className="text-xs mt-0.5" style={{ color: V.muted }}>{offer.company_name ?? 'TalentFlow Inc.'}</p>
                     </div>
                   </div>
                 </div>
